@@ -4,6 +4,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 require_once __DIR__ . '/../Entities/ProductModel.php';
 require_once __DIR__ . '/../Core/config.php';
+
 class ProductController
 {
     public function cadastrar()

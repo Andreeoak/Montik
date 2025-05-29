@@ -29,7 +29,17 @@ require_once __DIR__ . '/../Core/config.php';
 
   <div class="form-container">
     <div class="text-center mb-3">
-      <i class="bi bi-cart4 fs-1 text-primary"></i>
+      <div class="form-container">
+        <div class="text-center mb-3">
+            <a href="carrinhoRota.php?action=show" class="text-decoration-none position-relative d-inline-block">
+            <i class="bi bi-cart4 fs-1 text-primary"></i>
+            <!-- Badge para quantidade de itens no carrinho -->
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                <?= isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0 ?>
+                <span class="visually-hidden">itens no carrinho</span>
+            </span>
+            </a>
+        </div>
       <h2 class="mt-2">Cadastro de Produto</h2>
     </div>
 
@@ -74,3 +84,20 @@ require_once __DIR__ . '/../Core/config.php';
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+<?php
+
+// Simulando valores fixos do produto para teste.
+// Idealmente você pega do formulário, mas para link simples fica assim:
+$id = 1;
+$nome = "Produto Teste";
+$preco = 99.90;
+$estoque = 10;
+$qtd = 1;
+?>
+
+<!-- Link para adicionar ao carrinho -->
+<a href="carrinhoRota.php?action=add&id=<?= $id ?>&nome=<?= urlencode($nome) ?>&preco=<?= $preco ?>&qtd=<?= $qtd ?>&estoque=<?= $estoque ?>"
+   class="btn btn-success mt-3">
+   <i class="bi bi-cart-plus"></i> Adicionar Produto Teste ao Carrinho
+</a>
