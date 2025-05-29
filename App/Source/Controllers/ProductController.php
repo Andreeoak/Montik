@@ -20,8 +20,7 @@ class ProductController
             // Transformar string em array, removendo espaços e vazios
             $variacoes = array_filter(array_map('trim', explode(',', $variacoesString)));
 
-            //var_dump($nome, $preco, $variacoes, $estoque);
-
+            // Validar campos obrigatórios
             foreach ($variacoes as $variacao) {
                 $produto = ProductModel::findByNameAndVariacao($nome, $variacao);
 

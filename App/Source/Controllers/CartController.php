@@ -17,7 +17,7 @@ class CartController {
     public function add($id, $nome, $preco, $quantidade, $estoque) {
         $success = Cart::addProduct($id, $nome, $preco, $quantidade, $estoque);
         if (!$success) {
-            // pode setar uma mensagem de erro aqui, tipo estoque insuficiente
+            // TODO: Tratar erro, como estoque insuficiente
         }
         $this->show();
     }
