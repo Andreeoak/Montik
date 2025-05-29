@@ -48,12 +48,6 @@ CREATE TABLE pedidos (
     FOREIGN KEY (cupom_id) REFERENCES cupons(id)
 );
 
--- Comentários sobre o modelo:
---O campo total em pedidos pode ser calculado com base na quantidade e no preço do produto, menos o desconto (mas é armazenado diretamente para simplificar).
---cupons podem aplicar tanto desconto percentual quanto fixo (um dos dois pode ser nulo).
---estoque é separado para controle de quantidade e atualizações.
---pedidos armazena uma linha por produto pedido; se quiser representar múltiplos produtos por pedido, seria necessário criar uma tabela pedidos e outra itens_pedido.
---Se quiser esse modelo mais avançado (com pedidos contendo múltiplos produtos), posso ajustar.
 
 
 
