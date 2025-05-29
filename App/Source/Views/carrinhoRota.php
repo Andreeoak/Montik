@@ -7,10 +7,6 @@ $controller = new CartController();
 
 $action = $_GET['action'] ?? 'show';
 
-echo '<pre>';
-print_r($_GET);
-echo '</pre>';
-exit;
 
 switch ($action) {
     case 'add':
