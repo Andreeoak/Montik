@@ -1,6 +1,6 @@
 # 🛒 Montik – Laravel E-commerce Application
 
-**Montik** is a Laravel-based e-commerce application developed as a coding challenge. It enables users to register products, add them to a shopping cart, and complete purchases. A unique feature is the integration of a Brazilian postal code (CEP) verification API, ensuring that purchases are only completed with valid CEP inputs.
+**Montik** is a PHP-based e-commerce application developed as a coding challenge. It enables users to register products, add them to a shopping cart, and complete purchases. A unique feature is the integration of a Brazilian postal code (CEP) verification API, ensuring that purchases are only completed with valid CEP inputs.
 
 ## ✨ Features
 
